@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enchanting Math Challenge</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #E7CBCB;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        #container {
+            background: linear-gradient(45deg, #ff9ce2, #ff6bae);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 80%;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        #question {
+            font-size: 1.8em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        #responseInput {
+            font-size: 1em;
+            padding: 12px;
+            width: 100%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            color: #333;
+            background-color: #fff;
+            transition: border-color 0.3s ease;
+        }
+
+        #submitBtn {
+            background-color: #fff;
+            color: #ff6bae;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #submitBtn:hover {
+            background-color: #ff6bae;
+            color: #fff;
+        }
+
+        #result {
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: none;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        #imageContainer {
+            margin-top: 20px;
+            display: none;
+            overflow: hidden;
+            border-radius: 5px;
+            transition: opacity 0.5s ease;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        #responseInput:focus {
+            border-color: #ff6bae;
+        }
+
+        #container:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="question">What is 6 + 5?</div>
+        <input type="number" id="responseInput" placeholder="Your answer">
+        <button id="submitBtn" onclick="checkAnswer()">Submit</button>
+        <div id="result"></div>
+        <div id="imageContainer">
+            <img src="GF.jpg" alt="ali">
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const responseInput = document.getElementById('responseInput');
+            const resultDiv = document.getElementById('result');
+            const imageContainer = document.getElementById('imageContainer');
+
+            if (responseInput.value.trim() === '11') {
+                resultDiv.textContent = 'Happy 11th Monthsary my LOVE! akala mo nakalimutan ko na no HAHAHA no way! i just wanted to tell you how thankful I am for having you 🫰🏻. Thank you for being a supportive, understanding and loving partner my Love ❤️. see you soon my one and only KARLEK!, I LOVE YOU AND I MISS YOU SO MUCH 😚';
+                resultDiv.style.color = '#fff';
+                imageContainer.style.display = 'block';
+            } else {
+                resultDiv.textContent = 'Oops! That\'s incorrect. Try again!';
+                resultDiv.style.color = '#fff';
+                imageContainer.style.display = 'none';
+            }
+
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
